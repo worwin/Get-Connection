@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Configuration>
     <ViewDefinitions>
         <View>
@@ -5,13 +6,16 @@
             <ViewSelectedBy>
                 <TypeName>Get.Connection.Object</TypeName>
             </ViewSelectedBy>
+
             <TableControl>
                 <TableHeaders>
                     <TableColumnHeader>
                         <Label>State</Label>
+                        <Width>16</Width>
                     </TableColumnHeader>
                     <TableColumnHeader>
                         <Label>CPU</Label>
+                        <Width>5</Width>
                     </TableColumnHeader>
                 </TableHeaders>
                 <TableRowEntries>
@@ -20,7 +24,7 @@
                             <TableColumnItem>
                                 <PropertyName>State</PropertyName>
                             </TableColumnItem>
-                             <TableColumnItem>
+                            <TableColumnItem>
                                 <PropertyName>CPU</PropertyName>
                             </TableColumnItem>
                         </TableColumnItems>

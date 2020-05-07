@@ -30,6 +30,7 @@
                         Session = $computer
                         Status = 'Connected'}
                     $obj = New-Object -TypeName PSObject -Property $properties
+		            #$obj.psobject.typenames.insert(0,'Get.Connection.Object')
                     Write-Output $obj
                 }
             } catch {
@@ -47,6 +48,7 @@
                         Session = $computer
                         Status = 'Disconnected'}
                     $obj = New-Object -TypeName PSObject -Property $properties
+		            #$obj.psobject.typenames.insert(0,'Get.Connection.Object')
                     Write-Output $obj
                 }          
             } finally {
