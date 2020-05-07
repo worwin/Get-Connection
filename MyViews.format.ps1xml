@@ -1,0 +1,34 @@
+<Configuration>
+    <ViewDefinitions>
+        <View>
+            <Name>ConnectionList</Name>
+            <ViewSelectedBy>
+                <TypeName>Get.Connection.Object</TypeName>
+            </ViewSelectedBy>
+            <TableControl>
+                <TableHeaders>
+                    <TableColumnHeader>
+                        <Label>State</Label>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>CPU</Label>
+                    </TableColumnHeader>
+                </TableHeaders>
+                <TableRowEntries>
+                    <TableRowEntry>
+                        <TableColumnItems>
+                            <TableColumnItem>
+                                <PropertyName>State</PropertyName>
+                            </TableColumnItem>
+                             <TableColumnItem>
+                                <PropertyName>CPU</PropertyName>
+                            </TableColumnItem>
+                        </TableColumnItems>
+                    </TableRowEntry>
+                </TableRowEntries>
+            </TableControl>
+
+        </View>
+    </ViewDefinitions>
+</Configuration>
+
