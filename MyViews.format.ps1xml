@@ -4,35 +4,156 @@
         <View>
             <Name>ConnectionList</Name>
             <ViewSelectedBy>
-                <TypeName>Get.Connection.Object</TypeName>
+                <TypeName>Get.Connection.Single.Computer.Object</TypeName>
             </ViewSelectedBy>
 
             <TableControl>
                 <TableHeaders>
                     <TableColumnHeader>
-                        <Label>State</Label>
-                        <Width>16</Width>
+                        <Label>ProcessName</Label>
+                        <Width>11</Width>
                     </TableColumnHeader>
                     <TableColumnHeader>
-                        <Label>CPU</Label>
+                        <Label>ID</Label>
                         <Width>5</Width>
+                        <Alignment>right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>State</Label>
+                        <Width>11</Width>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>CPU(s)</Label>
+                        <Width>9</Width>
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>LocalAddress</Label>
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>LocalPort</Label>
+                        <Width>5</Width>
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>RemoteAddress</Label>
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>RemotePort</Label>
+                        <Width>6</Width>
+                        <Alignment>Right</Alignment>
                     </TableColumnHeader>
                 </TableHeaders>
                 <TableRowEntries>
                     <TableRowEntry>
                         <TableColumnItems>
                             <TableColumnItem>
+                                <PropertyName>ProcessName</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>ID</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
                                 <PropertyName>State</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>CPU</PropertyName>
+                                <ScriptBlock>
+                                if ($_.CPU -ne $()) 
+                                { 
+                                    $_.CPU.ToString("N") 
+                                }
+				            </ScriptBlock>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>LocalAddress</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>LocalPort</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>RemoteAddress</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>RemotePort</PropertyName>
                             </TableColumnItem>
                         </TableColumnItems>
                     </TableRowEntry>
                 </TableRowEntries>
             </TableControl>
-
         </View>
+    
+        
+        
+        <View>
+            <Name>ConnectionList2</Name>
+            <ViewSelectedBy>
+                <TypeName>Get.Connection.Multiple.Computer.Object</TypeName>
+            </ViewSelectedBy>
+
+            <TableControl>
+                <TableHeaders>
+                    <TableColumnHeader>
+                        <Label>Session</Label>
+                        <Width>8</Width>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>Status</Label>
+                        <Width>12</Width>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>ProcessName</Label>
+                        <Width>11</Width>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>ID</Label>
+                        <Width>5</Width>
+                        <Alignment>right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>State</Label>
+                        <Width>11</Width>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>CPU(s)</Label>
+                        <Width>9</Width>
+                        <Alignment>right</Alignment>
+                    </TableColumnHeader>
+                </TableHeaders>
+                <TableRowEntries>
+                    <TableRowEntry>
+                        <TableColumnItems>
+                            <TableColumnItem>
+                                <PropertyName>Session</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Status</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>ProcessName</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>ID</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>State</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <ScriptBlock>
+                                if ($_.CPU -ne $()) 
+                                { 
+                                    $_.CPU.ToString("N") 
+                                }
+				            </ScriptBlock>
+                            </TableColumnItem>
+                        </TableColumnItems>
+                    </TableRowEntry>
+                </TableRowEntries>
+            </TableControl>
+        </View>
+
+
     </ViewDefinitions>
 </Configuration>
 
